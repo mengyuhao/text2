@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	
+	</head>
+	<body>
+		<ul id="test">  
+	    <li>这是第一条</li>  
+	    <li>这是第二条</li>  
+	    <li>这是第三条</li>  
+	</ul> 
+	</body>
+	
+	<script type="text/javascript">
+	    var testLi=document.getElementsByTagName('li');
+	     for(var i=0;i<testLi.length;i++) {
+	         testLi[i].addEventListener("click", function (num){
+	             return function (){
+	                alert(num+1);
+	             }
+	         }(i))
+	     }
+	</script>
+</html>
